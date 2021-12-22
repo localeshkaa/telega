@@ -8,12 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Clone rep with test
-      run:  git clone https://github.com/localeshkaa/telega -b release-1.10.0
     - name: install python for test charge
       run:  sudo apt install python3-pip
     - uses: actions/checkout@v2
     - name: Run Test
       working-directory: ./tests
       run: python ./studtest.py
-
