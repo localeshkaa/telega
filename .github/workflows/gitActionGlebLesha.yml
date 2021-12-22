@@ -11,7 +11,8 @@ jobs:
     - name: install python for test charge
       run:  sudo apt install python3-pip
     - uses: actions/checkout@v2
+    - name: install teleBot
+      run: python pip install pyTelegramBotAPI
     - name: Run Test
       working-directory: ./tests
-      run: python pip install pyTelegramBotAPI
       run: python ./studtest.py
